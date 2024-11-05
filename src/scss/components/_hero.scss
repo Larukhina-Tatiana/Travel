@@ -1,0 +1,72 @@
+.hero {
+  &__inner {
+    display: flex;
+    align-items: center;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 80px;
+    gap: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+  }
+
+  &__desc {
+    width: 46.67%;
+  }
+
+  &__title {
+    max-width: 560px;
+    background: url(../images/icons/hero-line.svg) left bottom 2px / 268px 24px no-repeat;
+  }
+
+  &__images {
+    position: relative;
+    width: 46.67%;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    width: clamp(18.125rem, 6.071rem + 60.27vw, 35rem);
+  }
+
+  &__product {
+    position: absolute;
+    display: flex;
+    // top: 90px;
+    top: clamp(1.25rem, -1.875rem + 15.63vw, 5.625rem);
+    // left: 40px;
+    left: clamp(-0.25rem, -2.214rem + 9.82vw, 2.5rem);
+  }
+
+  &__text {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__form {
+    margin-top: 38px;
+  }
+
+  &__scroll {
+    position: relative;
+  }
+
+  @media screen and (width <=1024px) {
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__desc,
+    &__images {
+      width: 100%;
+    }
+
+    &__images {
+      // margin-top: 40px;
+      order: -1;
+    }
+
+    &__img {
+      margin: 0 auto;
+    }
+  }
+}

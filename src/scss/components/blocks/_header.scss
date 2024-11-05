@@ -1,0 +1,26 @@
+.header {
+	padding: 16px 0;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__record {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		// margin-left: 226px;
+		@media screen and (width >=769px) {
+			margin-left: clamp(2.5rem, -18.167rem + 43.06vw, 14.125rem);
+		}
+	}
+
+	@media screen and (width <=768px) {
+		&__record {
+			margin-top: 50px;
+		}
+	}
+}

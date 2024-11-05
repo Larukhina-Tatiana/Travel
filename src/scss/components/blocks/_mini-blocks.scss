@@ -1,0 +1,18 @@
+.simbol {
+  color: $accent;
+  font-weight: 500;
+}
+
+.price {
+  color: $title-color;
+}
+
+.line {
+  background-color: $text-color;
+  width: 1px;
+  height: 24px;
+
+  @media screen and (width <=768px) {
+    display: none;
+  }
+}

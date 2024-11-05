@@ -1,0 +1,37 @@
+.satisfied {
+  position: absolute;
+  border-radius: 12px;
+  padding: 12px;
+  left: -9.28%;
+  top: 66px;
+  box-shadow: 0 4px 32px 0 rgba(50, 75, 104, 0.17);
+  background-color: $white;
+  font-size: 18px;
+
+  &__list {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: -15px;
+    }
+  }
+
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__text {
+    color: $title-color;
+  }
+
+  @media screen and (width <=1119px) {
+    left: -8px;
+  }
+
+  @media screen and (width <=425px) {
+    left: 20px;
+  }
+}

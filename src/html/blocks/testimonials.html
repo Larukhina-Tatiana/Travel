@@ -1,0 +1,24 @@
+<div class="swiper-slide">
+  <article class="testimonials">
+    <div class="testimonials__rating">
+      @for (var i = 0; i < context.stars; i++) { <img src="./images/icons/star.svg" alt="Star" width="21" height="20">
+        }
+
+        @if (context.stars < 5) { @for (var i=0; i < 5 - context.stars; i++) { <img src="./images/icons/star-off.svg"
+          alt="Star" width="21" height="20">
+          }
+          }
+    </div>
+    <blockquote class="testimonials__box">
+      <p class="testimonials__text">"@text"</p>
+      <div class="testimonials__profile">
+        <img class="testimonials__avatar" src="@img/@imgPath" alt="image profile" width="56">
+
+        <div class="testimonials__author">
+          <h4 class="testimonials__name">@name</h4>
+          <span class="testimonials__role">@role</span>
+        </div>
+      </div>
+    </blockquote>
+  </article>
+</div>

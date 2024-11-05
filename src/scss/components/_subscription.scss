@@ -1,0 +1,121 @@
+.subscription {
+  padding: 40px 20px;
+  background: url('@img/icons/location-big.svg') left 41px center / contain no-repeat $accent;
+  color: $white;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: clamp(0.938rem, -2.174rem + 6.48vw, 2.688rem) clamp(0.313rem, -1.91rem + 4.63vw, 1.563rem) clamp(0.938rem, -1.84rem + 5.79vw, 2.5rem) clamp(0.313rem, -19.132rem + 40.51vw, 11.25rem);
+    // padding: 43px 24px 40px 180px;
+    border-radius: 16px;
+  }
+
+  &__plea {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+
+    @media screen and (width >=768px) {
+      max-width: 303px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    color: #f0f0f0;
+    font-size: 20px;
+  }
+
+  @media screen and (width <=1024px) {
+    &__box {
+      flex-direction: column;
+
+    }
+  }
+
+  @media screen and (width <=768px) {
+    background: none;
+    background-color: $accent;
+    padding: 0;
+  }
+}
+
+.subscription-form {
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__icon-wrap {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  &__input {
+    border: 1px solid $white;
+    border-radius: 8px;
+    padding: 15px 12px 15px 44px;
+    // width: 328px;
+    width: 100%;
+    font-size: 14px;
+
+    // height: 48px;
+    ::placeholder {
+      color: $text-color;
+      line-height: 150%;
+    }
+  }
+
+  &__policy {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__btn {
+    padding: 11px 23px;
+    border-radius: 8px;
+    background: $title-color;
+    font-size: 16px;
+    line-height: 150%;
+    border: 1px solid transparent;
+    @include transition ($transition-property: (background-color, color));
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid $title-color;
+        background-color: $white;
+        color: $title-color;
+      }
+    }
+  }
+
+  @media screen and (width <=1024px) {
+    width: 100%;
+  }
+
+  @media screen and (width <=768px) {
+    width: 100%;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__icon-wrap {
+      width: 100%;
+    }
+  }
+
+}

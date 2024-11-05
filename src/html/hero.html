@@ -1,0 +1,28 @@
+<section class="hero section">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__desc">
+        <h1 class="hero__title title-h1">Discover your favorite place with&nbsp;us</h1>
+        <p class="hero__text">
+          Your journey begins here with our curated travel experiences. Discover new horizons, create lasting memories,
+          and
+          explore the world with our expertly crafted itineraries.
+        </p>
+        @include('blocks/form.html', {})
+      </div>
+      <div class="hero__images">
+        <img class="hero__img" src="@img/image1.jpg" alt="images">
+        @include('product.html',
+        {"class": "hero__product",
+        "pathImg": "product/image1.jpg",
+        "title": "Coco De Heaven",
+        "rating": "(4.5)",
+        "price": "400"
+        })
+        <div class="hero__scroll">
+          @include('scroll.html', {})
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

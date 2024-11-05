@@ -1,0 +1,81 @@
+:root {
+    --font-family: "CircularStd", sans-serif;
+    --second-family: "Inter", sans-serif;
+
+    --solid: #7a0000;
+    --bg: rgba(164, 164, 164, 0.15);
+    --accent-color: #35aff4;
+
+
+    // --box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03),
+    //     0 12px 10px -6px rgba(154, 156, 165, 0.04),
+    //     0 30px 24px -10px rgba(154, 156, 165, 0.05),
+    //     0 80px 80px -20px rgba(154, 156, 165, 0.08);
+
+    // --border-radius: 30px;
+    --box-shadow: 0 4px 10px 0 rgba(23, 28, 31, 0.23);
+
+    // --hero-slider-speed: 1500;
+
+    --burger-width: 40px;
+    --burger-height: 20px;
+    --burger-line-height: 2px;
+
+    --swiper-theme-color: var(--accent-color);
+    --indent: max(15px, calc((100% - 1180px) /2));
+    --title-color: #181818;
+    --text-color: #909090;
+    --page-bg: #fff;
+
+
+    --container-width: 1230px;
+    --container-padding: 15px;
+
+    --laptop-size: 1199px;
+    --tablet-size: 959px;
+    --mobile-size: 599px;
+}
+
+$accent: #35aff4;
+$title-color: #181818;
+$text-color: #909090;
+
+// $bg: rgba(164, 164, 164, 0.15);
+$white: #FFF;
+$black: #000;
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}
+
+
+@mixin transition ($transition-property: color, $transition-duration: 450ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)) {
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}
+
+
+// <svg class="projects__item-svg" width="30" height="30" aria-label="РРєРѕРЅРєР° РїРѕРёСЃРєР°">
+// <use href="./images/projects/icons.svg#icon-search"></use>
+// </svg>
+
+//  Линия под заголовками
+//  padding-bottom: 23px;
+// margin-bottom: 23px;
+// position: relative;
+
+// &::after {
+//   position: absolute;
+//   content: '';
+//   width: 200px;
+//   height: 1px;
+//   left: calc(50% - 100px);
+//   bottom: 0;
+//   background-color: #6D7278;
+//   border: 1px solid var(--line);
+//   border-radius: 0.5px;
+// }
+// }
+
+//       box-shadow: -3px -3px 49px rgb(10 1 1 / 4%), 3px 10px 36px rgb(0 0 0 / 10%);

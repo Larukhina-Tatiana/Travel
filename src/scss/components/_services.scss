@@ -1,0 +1,114 @@
+.services {
+  background-color: $white;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__content {
+    margin-top: 6.5px;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  &__title {
+    text-wrap: balance;
+  }
+
+  &__text {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__list {
+    display: flex;
+    gap: 48px 24px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    counter-reset: number;
+  }
+
+  &__item {
+    max-width: 248px;
+    // width: 100%;
+    list-style: none;
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      display: inline-block;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $accent;
+      width: 24px;
+      height: 24px;
+      content: counter(number);
+      color: $white;
+      font-size: 16px;
+      line-height: 150%;
+      counter-increment: number;
+    }
+
+    &-title {
+      margin-bottom: 4px;
+      line-height: 140%;
+    }
+
+    &-descr {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    gap: 24px;
+    background: url("../images/icons/elips.svg") center center / auto no-repeat;
+
+    &-img {
+      border-radius: 18px;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (width <=1119px) {
+    &__box {
+      display: block;
+    }
+
+    &__content {
+      max-width: none;
+    }
+
+    &__list {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      max-width: none;
+    }
+
+    &__images {
+      max-width: none;
+      justify-content: space-evenly;
+
+      &-img {
+        width: 248px;
+        height: 264px;
+      }
+    }
+  }
+}

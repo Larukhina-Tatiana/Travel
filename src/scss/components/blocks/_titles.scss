@@ -1,0 +1,35 @@
+.title-h1 {
+  color: $title-color;
+  // font-size: 72px;
+  font-size: clamp(2rem, 1.091rem + 4.55vw, 4.5rem);
+  font-weight: 700;
+}
+
+.title-h2 {
+  color: $title-color;
+  // font-size: 40px;
+  font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 120%;
+}
+
+.title-h3 {
+  color: $title-color;
+  // font-size: 36px;
+  font-size: clamp(1.875rem, 1.739rem + 0.68vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.title-h4 {
+  color: $title-color;
+  // font-size: 18px;
+  font-size: clamp(1rem, 0.911rem + 0.45vw, 1.125rem);
+  font-weight: 500;
+  // line-height: 150%;
+
+  &--lh {
+    line-height: 140%;
+  }
+}

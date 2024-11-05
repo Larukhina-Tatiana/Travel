@@ -1,0 +1,27 @@
+<section class="popular section">
+  <div class="container">
+    <div class="popular__top">
+      <div class="popular__title-box">
+        <h3 class="popular__title title-h3">Popular Destinations</h3>
+        <p class="popular__text">See our popular destinations that our client choose</p>
+      </div>
+      <div class="popular__controls">
+        <button class="swiper-button swiper-button-prev" id="sliderPrev">
+          <svg class="icon icon--arrow-left">
+            <use href="./images/svgsprite/sprite.symbol.svg#arrow-left"></use>
+          </svg>
+        </button>
+        <button class="swiper-button swiper-button-next" id="sliderNext">
+          <svg class="icon icon--arrow-right">
+            <use href="./images/svgsprite/sprite.symbol.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-right">
+    <div class="swiper" id="popular-slider">
+      @include('popular-slider.html')
+    </div>
+  </div>
+</section>

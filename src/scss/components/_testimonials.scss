@@ -1,0 +1,143 @@
+.section-testimonials {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow: hidden;
+    margin: 0 -10px;
+  }
+
+  &__horizontal-swiper {
+    display: none;
+
+    .swiper-slide {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      max-width: 380px;
+      // height: 500px;
+    }
+  }
+
+  @media screen and (width <=1024px) {
+    &__horizontal-swiper {
+      display: block;
+    }
+
+    &__list {
+      display: none;
+    }
+  }
+}
+
+.testimonials {
+  border-radius: 8px;
+  padding: 32px;
+  // width: 378px;
+  height: 322px;
+  box-shadow: 0 4px 10px 0 rgba(23, 28, 31, 0.23);
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+
+
+  &__swiper {
+    height: 900px;
+
+    @media screen and (width <=1440px) {
+      height: 600px;
+    }
+
+    .swiper-slide {
+      height: 322px !important;
+      padding: 0 5px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    // height: 100%;
+    flex-grow: 1;
+  }
+
+
+  &__text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__author {
+    span {
+      display: block;
+    }
+  }
+
+  &__name {
+    color: $title-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  @media screen and (width <=1024px) {}
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+
+  95% {
+    opacity: 1;
+    transform: translateY(-10%);
+    filter: blur(0);
+  }
+
+  97% {
+    opacity: 0;
+    transform: translateY(-10%);
+    filter: blur(10px);
+  }
+
+  98% {
+    opacity: 0;
+    transform: translateY(0%);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    filter: blur(0);
+  }
+}
+
+.smooth-transition {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}

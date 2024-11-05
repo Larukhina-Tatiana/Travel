@@ -1,0 +1,72 @@
+.form {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr auto;
+  gap: 16px;
+  // padding: 12px 16px;
+  padding: 12px clamp(0.313rem, 0.063rem + 1.25vw, 1rem);
+  border: 1px solid rgba(144, 144, 144, 0.3);
+  border-radius: 16px;
+  background-color: $white;
+
+  // width: 560px;
+  // height: 72px;
+
+
+  &__label-span {
+    // display: inline-block;
+    display: flex;
+    flex-direction: column;
+    padding-left: 36px;
+    font-weight: 500;
+    color: $title-color;
+    margin-bottom: 8px;
+
+    &--location {
+      background: url('@img/icons/location.svg') left center / 24px 24px no-repeat;
+    }
+
+    &--calendar {
+      background: url('@img/icons/calendar.svg') left center / 24px 24px no-repeat;
+    }
+  }
+
+  &__input {
+    padding: 0 0 0 36px;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+  }
+
+  &__btn {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: $accent;
+    border: 2px solid transparent;
+    @include transition ($transition-property: (color, background-color, border));
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $white;
+        border: 2px solid $accent;
+
+        .icon--search {
+          fill: $accent;
+        }
+      }
+    }
+
+    &:focus {
+      outline: 2px solid $accent;
+    }
+  }
+
+  @media screen and (width <=768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    &__btn {
+      justify-items: center;
+    }
+  }
+}

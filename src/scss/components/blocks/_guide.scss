@@ -1,0 +1,21 @@
+.guide {
+  border-radius: 82px;
+  padding: 12px;
+  width: 240px;
+  // height: 72px;
+  box-shadow: 0 4px 34px 0 rgba(50, 75, 104, 0.17);
+  background: $white;
+  position: absolute;
+  top: 64.46%;
+  left: -32px;
+
+  &__box {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  @media screen and (width <=768px) {
+    left: 10px;
+  }
+}

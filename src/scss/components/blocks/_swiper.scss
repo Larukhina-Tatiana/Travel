@@ -1,0 +1,24 @@
+.swiper-button {
+  border: 1px solid #b9b9b9;
+  border-radius: 50px;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include transition ($transition-property: (border, background-color));
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: transparent;
+      background-color: $accent;
+
+      .icon--arrow-right,
+      .icon--arrow-left {
+        fill: $white;
+      }
+    }
+  }
+}

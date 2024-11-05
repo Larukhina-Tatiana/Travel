@@ -1,0 +1,28 @@
+.nav {
+  color: $title-color;
+  margin-left: auto;
+  line-height: 1.5;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  &__link {
+    padding: 8px 0;
+    @include transition ($transition-property: color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+
+    &--active {
+      color: $accent;
+    }
+  }
+
+  @media screen and (width <=768px) {}
+}

@@ -1,0 +1,15 @@
+.login {
+  border: 1px solid #b7b7b7;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: #454545;
+  background-color: $white;
+  line-height: 1.5;
+  @include transition ($transition-property: color);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $accent;
+    }
+  }
+}

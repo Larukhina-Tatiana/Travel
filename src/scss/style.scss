@@ -1,0 +1,12 @@
+@import "./utils/modern-normalize.min";
+@import "./utils/fonts";
+@import "./utils/vars";
+@import "./utils/global";
+@import "./utils/icons";
+@import "./utils/mixins";
+@import "./utils/container";
+// @import "./utils/sticky-footer";
+@import "./utils/section";
+
+// @import "./blocks/*.scss";
+@import "./components/**/*.scss";

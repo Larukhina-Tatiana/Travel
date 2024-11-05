@@ -1,0 +1,34 @@
+<section class="explore">
+  <div class="container">
+    <div class="explore__inner">
+      <div class="explore__image-box">
+        <img class="explore__img" src="@img/explore/image1.jpg" alt="image1">
+        @include('product.html',
+        {"class": "explore__product hero__product",
+        "pathImg": "explore/image2.jpg",
+        "title": "Heaven Resort",
+        "rating": "(4.7)",
+        "price": "450"
+        })
+        @include('guide.html',
+        {"class": "",
+        "pathImg": "explore/avatar1.jpg",
+        "title": "Jake Anderson",
+        "post": "Best Tour Guide"
+        })
+      </div>
+      <div class="explore__content">
+        <h2 class="title-h2 explore__title">
+          With Our Service We Will Explore Something Different
+        </h2>
+        <p class="explore__text">
+          Uncover hidden gems and immerse yourself in vibrant cultures. From breathtaking landscapes to awe-inspiring
+          destinations, let us guide you to the most extraordinary places on the planet.
+        </p>
+        <button class="explore__btn">
+          Explore more
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

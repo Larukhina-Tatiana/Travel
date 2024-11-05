@@ -1,0 +1,41 @@
+<section class="section-testimonials">
+  <h2 class="visually-hidden">
+    testimonials
+  </h2>
+  <div class="container">
+    <div class="section-testimonials__horizontal-swiper">
+      <div class="swiper" id="testimonial-swiper-horizontal">
+        <div class="swiper-wrapper smooth-transition">
+          @loop('./blocks/testimonials.html', './html/data/testimonial-all.json)
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-testimonials__list">
+      <div class="section-testimonials__item">
+        <div class="swiper testimonials__swiper" id="testimonial-swiper1">
+          <div class="swiper-wrapper smooth-transition">
+            @loop('./blocks/testimonials.html', './html/data/testimonial1.json)
+          </div>
+        </div>
+      </div>
+      <div class="section-testimonials__item">
+        <div class="swiper testimonials__swiper" id="testimonial-swiper2">
+          <div class="swiper-wrapper smooth-transition">
+            @loop('./blocks/testimonials.html', './html/data/testimonial2.json)
+          </div>
+        </div>
+      </div>
+      <div class="section-testimonials__item">
+        <div class="swiper testimonials__swiper" id="testimonial-swiper3">
+          <div class="swiper-wrapper smooth-transition">
+            @loop('./blocks/testimonials.html', './html/data/testimonial3.json)
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</section>
