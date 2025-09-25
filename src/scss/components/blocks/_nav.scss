@@ -11,13 +11,10 @@
 
   &__link {
     padding: 8px 0;
+    position: relative;
     @include transition ($transition-property: color);
 
-    @media (any-hover: hover) {
-      &:hover {
-        color: $accent;
-      }
-    }
+
 
     &--active {
       color: $accent;

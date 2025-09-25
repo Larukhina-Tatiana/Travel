@@ -18,7 +18,6 @@ ul {
 img {
     display: block;
     max-width: 100%;
-    // width: 100%;
 }
 
 input,
@@ -66,7 +65,7 @@ body {
     font-family: CircularStd, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     // font-size: clamp(0.75rem, 0.556rem + 0.86vw, 1.25rem);
 }
 
@@ -202,4 +201,40 @@ button {
 
 htlm {
     scroll-behavior: smooth;
+}
+
+.nav__link,
+.footer__link {
+    display: inline-block;
+    position: relative;
+    padding: 8px 0;
+    @include transition ($transition-property: color);
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        width: 100%;
+        height: 2px;
+        background-color: $accent;
+        transition: transform 0.4s ease;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            &:after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+    }
+}
+
+.container-running {
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    will-change: transform;
 }

@@ -12,21 +12,52 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 140%;
+    flex-shrink: 0;
   }
 
   &__list {
     display: flex;
     align-items: center;
     gap: 32px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   }
+
+
+
+
 
   @media screen and (width <=768px) {
     &__box {
       flex-direction: column;
     }
 
-    &__list {
-      flex-direction: column;
+  }
+}
+
+.running-line-right {
+  padding-block: 5px;
+  width: max-content;
+  animation: running-line-right 30s linear 1s infinite;
+
+  @media screen and (max-width:768px) {
+    animation: running-line-right 40s linear 1s infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .running-track {
+      animation: none;
     }
+  }
+}
+
+@keyframes running-line-right {
+  0% {
+    transform: translateX(0);
+    transform-origin: left center;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    transform-origin: right center;
   }
 }
